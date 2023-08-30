@@ -26,7 +26,7 @@ export class App extends Component {
 
   calculatePositivePercentage = () => {
     const total = this.calculateTotal();
-    return total > 0 ? ((this.state.good / total) * 100).toFixed(2) : 0;
+    return total > 0 ? `${((this.state.good / total) * 100).toFixed(2)}` : '0%';
   };
 
   calculateNoFeedback = () => {
@@ -50,7 +50,7 @@ export class App extends Component {
 
         <Section title="Statistics">
           {noFeedback ? (
-            <NoFeetback title="No ffetback given!" />
+            <NoFeetback title="There is no feedback" />
           ) : (
             <Statistics
               options={this.state}
