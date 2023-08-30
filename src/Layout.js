@@ -8,5 +8,5 @@ export const Layout = styled.div`
   /* max-width: 1400px; */
   margin: 0 auto;
   padding: 10px;
-  background-color: ${props => props.theme.colors.beige};
+  background-color: ${p => p.theme.colors.beige};
 `;
