@@ -7,7 +7,7 @@ import './index.css';
 const theme = {
   colors: {
     lightgreen: '#A3B18A',
-    green: '#588157',
+    green: '#3A5A40',
     white: '#FFFFFF',
     beige: '#DAD7CD',
   },

@@ -5,7 +5,6 @@ export const Layout = styled.div`
   flex-direction: column;
   gap: 15px;
   align-items: center;
-  /* max-width: 1400px; */
   margin: 0 auto;
   padding: 10px;
   background-color: ${p => p.theme.colors.beige};

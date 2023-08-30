@@ -1,4 +1,4 @@
-import { StatisticField } from './Statistics.styled';
+import { StatElement } from './Statistics.styled';
 
 export const Statistics = ({
   options: { good, neutral, bad },
@@ -7,11 +7,11 @@ export const Statistics = ({
 }) => {
   return (
     <div>
-      <StatisticField>Good: {good}</StatisticField>
-      <StatisticField>Neutral: {neutral}</StatisticField>
-      <StatisticField>Bad: {bad}</StatisticField>
-      <StatisticField>Total: {total}</StatisticField>
-      <StatisticField>Positive feedback: {positivePercentage}%</StatisticField>
+      <StatElement>Good: {good}</StatElement>
+      <StatElement>Neutral: {neutral}</StatElement>
+      <StatElement>Bad: {bad}</StatElement>
+      <StatElement>Total: {total}</StatElement>
+      <StatElement>Positive feedback: {positivePercentage}%</StatElement>
     </div>
   );
 };
