@@ -1,5 +1,5 @@
 import { GlobalStyle } from 'GlobalStyle';
-import { Layout } from 'Layuot';
+import { Layout } from 'Layout';
 import { Component } from 'react';
 import { FeedbackOptions } from './Buttons/Buttons';
 import { NoFeetback } from './NoFeetback/NoFeetback';
@@ -17,6 +17,21 @@ export class App extends Component {
     this.setState(prevState => ({
       [feedbackType]: prevState[feedbackType] + 1,
     }));
+  };
+
+  calculateTotal = () => {
+    const { good, neutral, bad } = this.state;
+    return good + neutral + bad;
+  };
+
+  calculatePositivePercentage = () => {
+    const total = this.calculateTotal();
+    return total > 0 ? ((this.state.good / total) * 100).toFixed(2) : 0;
+  };
+
+  calculateNoFeedback = () => {
+    const { good, neutral, bad } = this.state;
+    return good === 0 && neutral === 0 && bad === 0;
   };
 
   render() {
